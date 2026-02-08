@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Un-Rejectable Valentine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Romantic floating hearts and teddies (bottom to top) -->
+  <div id="floating-romantic" class="floating-romantic" aria-hidden="true">
+    <span class="float-item float-heart">❤️</span>
+    <span class="float-item float-heart">💕</span>
+    <span class="float-item float-heart">💗</span>
+    <span class="float-item float-heart">💖</span>
+    <span class="float-item float-heart">♥</span>
+    <span class="float-item float-teddy">🧸</span>
+    <span class="float-item float-teddy">🐻</span>
+    <span class="float-item float-heart">❤️</span>
+    <span class="float-item float-heart">💕</span>
+    <span class="float-item float-teddy">🧸</span>
+    <span class="float-item float-heart">💗</span>
+    <span class="float-item float-teddy">🐻</span>
+    <span class="float-item float-heart">💖</span>
+    <span class="float-item float-heart">♥</span>
+    <span class="float-item float-teddy">🧸</span>
+    <span class="float-item float-heart">❤️</span>
+    <span class="float-item float-heart">💕</span>
+    <span class="float-item float-teddy">🐻</span>
+    <span class="float-item float-heart">💗</span>
+    <span class="float-item float-heart">💖</span>
+  </div>
+  <div id="app">
+    <!-- Valentine ask card - full screen -->
+    <section id="valentine-card" class="screen hidden valentine-fullscreen">
+      <div class="valentine-content">
+        <div class="character-card">
+          <img src="assets/valentine-photo.png" alt="Valentine" class="valentine-photo" />
+        </div>
+        <h2 class="valentine-question"><span id="display-name">Rakhu </span>, will you be my Valentine?</h2>
+        <div class="buttons-wrap">
+          <button type="button" id="btn-yes" class="btn btn-yes">Yes</button>
+          <button type="button" id="btn-no" class="btn btn-no">No</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valentine Week - day slides (after Yes) -->
+    <section id="valentine-week" class="screen hidden valentine-fullscreen">
+      <div class="day-slide-deco" aria-hidden="true">
+        <span class="day-deco day-deco--tl">❤️</span>
+        <span class="day-deco day-deco--tr">🧸</span>
+        <span class="day-deco day-deco--bl">💕</span>
+        <span class="day-deco day-deco--br">🐻</span>
+        <span class="day-deco day-deco--ml">💗</span>
+        <span class="day-deco day-deco--mr">🧸</span>
+      </div>
+      <div id="day-slides">
+        <div class="day-slide" data-day="0">
+          <h2 class="day-title">1st - Rose Day</h2>
+          <p class="day-date">February 7 (Saturday)</p>
+          <p class="day-desc">Expressing affection with roses.</p>
+          <div class="day-photo-wrap">
+            <span class="photo-reveal-heart">❤️</span>
+            <span class="photo-reveal-heart">💕</span>
+            <span class="photo-reveal-heart">💗</span>
+            <img src="assets/fisrt.jpeg" alt="Rose Day" class="day-photo" />
+          </div>
+          <p class="day-romantic">You make every day bloom.</p>
+          <button type="button" class="btn btn-primary btn-next">Next</button>
+        </div>
+        <div class="day-slide" data-day="1">
+          <h2 class="day-title">2nd - Propose Day</h2>
+          <p class="day-date">February 8 (Sunday)</p>
+          <p class="day-desc">Confessing love and feelings.</p>
+          <div class="day-photo-wrap">
+            <span class="photo-reveal-heart">❤️</span>
+            <span class="photo-reveal-heart">💕</span>
+            <span class="photo-reveal-heart">💗</span>
+            <img src="assets/propose-day.png" alt="Propose Day" class="day-photo" />
+          </div>
+          <p class="day-romantic">My heart chose you.</p>
+          <button type="button" class="btn btn-primary btn-next">Next</button>
+        </div>
+        <div class="day-slide" data-day="2">
+          <h2 class="day-title">3rd - Chocolate Day</h2>
+          <p class="day-date">February 9 (Monday)</p>
+          <p class="day-desc">Sharing sweetness and joy.</p>
+          <div class="day-photo-wrap">
+            <span class="photo-reveal-heart">❤️</span>
+            <span class="photo-reveal-heart">💕</span>
+            <span class="photo-reveal-heart">💗</span>
+            <img src="assets/chocolate-day.png" alt="Chocolate Day" class="day-photo" />
+          </div>
+          <p class="day-romantic">Life is sweeter with you.</p>
+          <button type="button" class="btn btn-primary btn-next">Next</button>
+        </div>
+        <div class="day-slide" data-day="3">
+          <h2 class="day-title">4th - Teddy Day</h2>
+          <p class="day-date">February 10 (Tuesday)</p>
+          <p class="day-desc">Gifting soft toys for comfort.</p>
+          <div class="day-photo-wrap">
+            <span class="photo-reveal-heart">❤️</span>
+            <span class="photo-reveal-heart">💕</span>
+            <span class="photo-reveal-heart">💗</span>
+            <img src="assets/second.jpeg" alt="Teddy Day" class="day-photo" />
+          </div>
+          <p class="day-romantic">You're my safe place.</p>
+          <button type="button" class="btn btn-primary btn-next">Next</button>
+        </div>
+        <div class="day-slide" data-day="4">
+          <h2 class="day-title">5th - Promise Day</h2>
+          <p class="day-date">February 11 (Wednesday)</p>
+          <p class="day-desc">Making commitments to strengthen the bond.</p>
+          <div class="day-photo-wrap">
+            <span class="photo-reveal-heart">❤️</span>
+            <span class="photo-reveal-heart">💕</span>
+            <span class="photo-reveal-heart">💗</span>
+            <img src="assets/promise-day.png" alt="Promise Day" class="day-photo" />
+          </div>
+          <p class="day-romantic">I promise to love you always.</p>
+          <button type="button" class="btn btn-primary btn-next">Next</button>
+        </div>
+        <div class="day-slide" data-day="5">
+          <h2 class="day-title">6th - Hug Day</h2>
+          <p class="day-date">February 12 (Thursday)</p>
+          <p class="day-desc">Offering warmth and support.</p>
+          <div class="day-photo-wrap">
+            <span class="photo-reveal-heart">❤️</span>
+            <span class="photo-reveal-heart">💕</span>
+            <span class="photo-reveal-heart">💗</span>
+            <img src="assets/hug-day.png" alt="Hug Day" class="day-photo" />
+          </div>
+          <p class="day-romantic">Sending you a virtual hug.</p>
+          <button type="button" class="btn btn-primary btn-next">Next</button>
+        </div>
+        <div class="day-slide day-slide--valentine" data-day="6">
+          <div class="valentine-lyrics-wrap" aria-hidden="true">
+            <p class="valentine-lyrics">तुम इतनी तो नूरी हो, ना समझो कहीं पे अधूरी हो — ख़ुद से प्यार किया करो, किसी के लिए ज़रूरी हो</p>
+          </div>
+          <h2 class="day-title">7th - Valentine's Day</h2>
+          <p class="day-date">February 13 (Friday)</p>
+          <p class="day-desc">Sealing love with a kiss.</p>
+          <div class="day-photo-wrap valentine-day-photo-wrap">
+            <img src="assets/image.png" alt="Us" class="valentine-day-couple" />
+            <img src="assets/valentine-day-frame.png" alt="" class="valentine-day-frame" aria-hidden="true" />
+          </div>
+          <p class="day-romantic">Forever yours. Happy Valentine's Day! ❤️</p>
+          <p class="valentine-ilu">I love you</p>
+          <audio id="valentine-day-audio" preload="auto" loop>
+            <source src="assets/Jo%20Ishq%20Hua%20-%20DjBaap-[AudioTrimmer.com].mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success / celebration -->
+    <!-- <section id="celebration" class="screen hidden">
+      <div class="celebration-inner">
+        <div class="celebration-emoji">🎉</div>
+        <h2>Yay! That's the best decision you ever made! ❤️</h2>
+        <p class="hug-text">Happy Hug</p>
+      </div>
+    </section> -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
